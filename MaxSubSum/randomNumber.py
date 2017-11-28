@@ -2,7 +2,7 @@
 '''
 产生随机数组
 Author: Jachin
-Data: 2017- 11- 
+Data: 2017- 11- 27
 '''
 
 import random

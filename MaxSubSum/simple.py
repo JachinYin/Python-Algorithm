@@ -4,7 +4,6 @@
 Author: Jachin
 Data: 2017- 11- 
 '''
-import datetime
 from randomNumber import *
 
 pro = 0

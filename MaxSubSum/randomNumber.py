@@ -15,4 +15,4 @@ test_arr = [random.randint(BEGIN, END) for i in range(LENGTH)]
 
 #test_arr = [1,2,-1,-3,5,-3,8]
 
-test_arr = [1,17,-15,20,8,-5,9]
+#test_arr = [1,17,-2,5,-3,2]

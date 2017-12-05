@@ -36,26 +36,30 @@ def knapsack(w,v,c):
     return B
 
 def traceback(w,c,m):
+
     n = len(w)
     x =[0 for q in range(n)]
     for i in range(n-1,0,-1):
+        #如果把当前价值的最后一个物品去掉，价值变小，
+        # 说明这个物品是被添加到背包里的
         if m[i][c]>m[i-1][c]:
             x[i] = 1
             c -= w[i]
-        else:
+        else:   #否则不添加进背包
             x[i]=0
+
     x.pop(0)
 
-    res = []
+    res = []        #记录添加的物品的编号
     for i in range(len(x)):
         if x[i]:
             res.append(i+1)
     return res
 
-c = 20
+c = 20  #背包容量
 
-w = [2,3,4,5,9]
-v = [3,4,5,8,10]
+w = [2,3,4,5,9] #各物品重量
+v = [3,4,5,8,10]    #各物品价值
 
 #v = [1,3,5,9]
 #w = [2,3,4,7]

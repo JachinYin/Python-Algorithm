@@ -64,7 +64,12 @@ v = [3,4,5,8,10]    #各物品价值
 #v = [1,3,5,9]
 #w = [2,3,4,7]
 
+count = 0
+for i in zip(w,v):
+    count += 1
+    print("物品%-2d，重量：%d,价值：%d"%(count,i[0],i[1]))
+
 re = knapsack(w,v,c)
-print("这个背包取得的最大价值为%d" % re[-1][-1])
+print("这个背包取得的最大价值为【%d】" % re[-1][-1])
 
 print("装入物品的编号为%s"%str(traceback(w,c,re)))

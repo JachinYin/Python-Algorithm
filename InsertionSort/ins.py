@@ -7,7 +7,6 @@ Author: Jachin
 from randomNumber import *
 import datetime  # 引入该模块统计算法运行时间
 
-
 def insertionSort(arr):
     res = [arr[0]]  # 排好序的列表。默认第一个数是排序的了
     for i in range(1, len(arr)):
@@ -21,10 +20,7 @@ def insertionSort(arr):
                     break
     return res
 
-
 test_arr = [22, 4, 1, 29, 7, 3, 5, 9, 88]
-
-
 
 begin_time =  datetime.datetime.now()
 insertionSort(number_arr)

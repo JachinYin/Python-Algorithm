@@ -5,26 +5,29 @@ Author: Jachin
 插入排序
 '''
 from randomNumber import *
-import datetime             #引入该模块统计算法运行时间
+import datetime  # 引入该模块统计算法运行时间
+
 
 def insertionSort(arr):
-    res = [arr[0]]  #排好序的列表。默认第一个数是排序的了
-    for i in range(1,len(arr)):
-        if arr[i] > res[i-1]:   #如果要处理的数比res最后一个还大，则直接插到res末尾
+    res = [arr[0]]  # 排好序的列表。默认第一个数是排序的了
+    for i in range(1, len(arr)):
+        if arr[i] > res[i - 1]:  # 如果要处理的数比res最后一个还大，则直接插到res末尾
             res.append(arr[i])
-        else:   #否则判断
+        else:  # 否则判断
             for j in range(i):
-                if arr[i]<res[j]:
-                #从排序的第一个数（记为a）开始，如果要处理的数比a小，则直接插入，否则向后比较
-                    res.insert(j,arr[i])
+                if arr[i] <= res[j]:
+                    # 从排序的第一个数（记为a）开始，如果要处理的数比a小，则直接插入，否则向后比较
+                    res.insert(j, arr[i])
                     break
-    print res
+    return res
 
 
-test_arr = [22,4,1,29,7,3,5,9,88]
-#number_arr = [457, -775, 967, -575, 451, -629, -764, 296, -826, 276, -968, -473, -58, 587, 831, -257, 841, 103, 474, -952, 828, 2, -130, 368, -619, 546, -127, 206, 921, 461, -234, -962, -126, 720, -42, 237, 234, -981, -621, -843, 129, 758, -171, -122, -506, -899, 694, 296, -582, -963, -274, 663, -874, -815, 417, 89, -719, 151, -312, 989, 142, 256, -712, 726, -920, 425, -356, -802, 107, 574, 940, 125, 523, -963, -874, -556, -184, -444, 18, 662, 979, -54, -933, 412, -142, -717, -797, -342, 661, -146, -694, 290, -931, 941, 50, 83, -918, -73]
-try:
-    insertionSort(number_arr)
-except Exception as e:
-    print number_arr
-    print e
+test_arr = [22, 4, 1, 29, 7, 3, 5, 9, 88]
+
+
+
+begin_time =  datetime.datetime.now()
+insertionSort(number_arr)
+end_time =  datetime.datetime.now()
+
+print '算法用时 %sS' %str((end_time-begin_time).total_seconds())

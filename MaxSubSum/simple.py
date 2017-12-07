@@ -31,7 +31,7 @@ def Maxsum(s):
 #print '原数组为 %s'%s
 
 begin_time =  datetime.datetime.now()
-print '最大子段和:' + str(Maxsum(test_arr))
+print '最大子段和:' + str(Maxsum(number_arr))
 end_time =  datetime.datetime.now()
 
 print '从第 %d 个数到 第 %d 个数'%( pro+1,las+1)

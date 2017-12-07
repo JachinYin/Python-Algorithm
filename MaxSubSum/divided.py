@@ -12,8 +12,8 @@ def maxSubSum(left, right):
     global pro,las
     sum = 0
     if left == right:
-        if test_arr[left] > 0:
-            sum = test_arr[left]
+        if number_arr[left] > 0:
+            sum = number_arr[left]
         else:
             sum = 0
     else:
@@ -24,14 +24,14 @@ def maxSubSum(left, right):
         s1 = 0
         lefts = 0
         for i in range(center,left-1,-1):
-            lefts += test_arr[i]
+            lefts += number_arr[i]
             if lefts > s1:
                 s1 = lefts
                 pro = i
         s2 = 0
         rights = 0
         for j in range(center+1,right+1):
-            rights += test_arr[j]
+            rights += number_arr[j]
             if rights > s2:
                 s2 = rights
                 las = j
@@ -40,7 +40,7 @@ def maxSubSum(left, right):
     return sum
 
 begin_time =  datetime.datetime.now()
-print '最大子段和:' + str(maxSubSum(0, len(test_arr) - 1))
+print '最大子段和:' + str(maxSubSum(0, len(number_arr) - 1))
 end_time =  datetime.datetime.now()
 
 print '从第 %d 个数到 第 %d 个数'%(pro+1,las+1)

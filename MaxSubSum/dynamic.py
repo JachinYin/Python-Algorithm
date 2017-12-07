@@ -27,7 +27,7 @@ def maxSubSum(s):
 
 
 begin_time =  datetime.datetime.now()
-print '最大子段和:' + str(maxSubSum(test_arr))
+print '最大子段和:' + str(maxSubSum(number_arr))
 end_time =  datetime.datetime.now()
 
 print '从第 %d 个数到 第 %d 个数'%(pro+1,las+1)

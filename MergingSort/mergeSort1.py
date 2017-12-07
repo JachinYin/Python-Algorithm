@@ -4,6 +4,7 @@ Data: 2017- 12 - 07
 Author: Jachin
 归并排序
 '''
+from randomNumber import *
 
 def megeSort(arr):
     if len(arr) == 1:
@@ -37,4 +38,10 @@ def megeSort(arr):
     return arr
 
 test_arr = [1,4,3,2,7,9]
-print megeSort(test_arr)
+#print megeSort(test_arr)
+
+begin_time =  datetime.datetime.now()
+megeSort(number_arr)
+end_time =  datetime.datetime.now()
+
+print '排列%d个数用时%sS' %(len(number_arr),str((end_time-begin_time).total_seconds()))

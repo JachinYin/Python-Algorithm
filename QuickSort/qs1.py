@@ -38,4 +38,4 @@ begin_time =  datetime.datetime.now()
 quickSort(number_arr)
 end_time =  datetime.datetime.now()
 
-print '算法用时 %sS' %str((end_time-begin_time).total_seconds())
+print '排列%d个数用时%sS' %(len(number_arr),str((end_time-begin_time).total_seconds()))

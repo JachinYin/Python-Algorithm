@@ -9,6 +9,6 @@ import datetime
 import random
 
 LENGTH = 20000 #生成随机数个数
-BEGIN , END= -1000,1000 #生成随机数的范围取值
+BEGIN , END= 0,100000 #生成随机数的范围取值
 
 number_arr = [random.randint(BEGIN, END) for i in range(LENGTH)]

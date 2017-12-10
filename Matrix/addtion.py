@@ -2,7 +2,7 @@
 '''
 Data: 2017- 12 - 02
 Author: Jachin
-矩阵加法 
+矩阵加法
 '''
 
 import numpy as np

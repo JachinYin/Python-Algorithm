@@ -2,7 +2,7 @@
 '''
 Data: 2017- 12 - 02
 Author: Jachin
-This is a scrpit for ...
+矩阵加法 
 '''
 
 import numpy as np
@@ -35,4 +35,5 @@ m2 = [[2,3],
 
 Addition(m1,m2)
 print Multipication(m1,m2)
+
 

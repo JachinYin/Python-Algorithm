@@ -5,7 +5,6 @@ Author: Jachin
 基数排序更简单的写法
 '''
 
-from random import randint
 from randomNumber import *
 
 def radixSort(arr,digit = 5):

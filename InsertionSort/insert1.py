@@ -2,7 +2,7 @@
 '''
 Data: 2017- 12 - 06
 Author: Jachin
-插入排序
+直接插入排序
 '''
 from randomNumber import *
 import datetime  # 引入该模块统计算法运行时间
@@ -19,8 +19,6 @@ def insertionSort(arr):
                     res.insert(j, arr[i])
                     break
     return res
-
-test_arr = [22, 4, 1, 29, 7, 3, 5, 9, 88]
 
 begin_time =  datetime.datetime.now()
 insertionSort(number_arr)

@@ -7,9 +7,8 @@ Author: Jachin
 Data: 2017- 11- 30
 '''
 
-from randomNumber import *  #引入随机数列表生成模块
-import datetime             #引入该模块统计算法运行时间
-import random               #引入该模块来选择随机基准
+from randomNumber import *  # 引入随机数列表生成模块
+
 
 def quickSort(L):
     if not L:

@@ -11,7 +11,7 @@ def shellSort1(arr):
         return arr
 
 
-def shellsort3(arr):
+def shellSort(arr):
     n = len(arr)
     gap = n / 2
     while gap > 0:
@@ -29,4 +29,4 @@ def shellsort3(arr):
 
 A = [49,38,65,97,26,13,27,49,55,4]
 
-print shellsort3(A)
+print shellSort(A)

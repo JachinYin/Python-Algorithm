@@ -8,7 +8,7 @@ from randomNumber import *
 
 pro = 0
 las = 0
-def maxSubSum(left, right):
+def maxSubSum2(left, right):
     global pro,las
     sum = 0
     if left == right:
@@ -18,8 +18,8 @@ def maxSubSum(left, right):
             sum = 0
     else:
         center = (left + right)//2
-        leftSum = maxSubSum(left, center)        #情况1
-        rightSum = maxSubSum(center + 1, right)    #情况2
+        leftSum = maxSubSum2(left, center)        #情况1
+        rightSum = maxSubSum2(center + 1, right)    #情况2
         #情况3
         s1 = 0
         lefts = 0
@@ -40,10 +40,10 @@ def maxSubSum(left, right):
     return sum
 
 begin_time =  datetime.datetime.now()
-print '最大子段和:' + str(maxSubSum(0, len(number_arr) - 1))
+print '最大子段和:' + str(maxSubSum2(0, len(number_arr) - 1))
 end_time =  datetime.datetime.now()
 
 print '从第 %d 个数到 第 %d 个数'%(pro+1,las+1)
 
-print '算法用时%sS' %str((end_time-begin_time).total_seconds())
-
+time2 = (end_time-begin_time).total_seconds()
+print '用递归算法排列%d个数用时%sS' %(len(number_arr),str(time2))

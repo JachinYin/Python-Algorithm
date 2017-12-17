@@ -8,7 +8,7 @@ from randomNumber import *
 
 pro = 0
 las = 0
-def Maxsum(s):
+def maxSubSum1(s):
     '''
     simple for max sub sum
     :param s:
@@ -31,9 +31,10 @@ def Maxsum(s):
 #print '原数组为 %s'%s
 
 begin_time =  datetime.datetime.now()
-print '最大子段和:' + str(Maxsum(number_arr))
+print '最大子段和:' + str(maxSubSum1(number_arr))
 end_time =  datetime.datetime.now()
 
 print '从第 %d 个数到 第 %d 个数'%( pro+1,las+1)
 
-print '算法用时%sS' %str((end_time-begin_time).total_seconds())
+time1 = (end_time-begin_time).total_seconds()
+print '用暴力算法排列%d个数用时%sS' %(len(number_arr),str(time1))

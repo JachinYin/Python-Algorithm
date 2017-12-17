@@ -2,7 +2,7 @@
 '''
 最大子段和问题的 简单解法
 Author: Jachin
-Data: 2017- 11- 
+Data: 2017- 11- 27
 '''
 from randomNumber import *
 

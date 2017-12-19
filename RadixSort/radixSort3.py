@@ -25,7 +25,7 @@ def radixSort(arr,digit = 5):
     return arr
 
 begin_time =  datetime.datetime.now()
-print radixSort(number_arr,len(str(max(number_arr))))
+radixSort(number_arr,len(str(max(number_arr))))
 end_time =  datetime.datetime.now()
 
 print '排列%d个数用时%sS' %(len(number_arr),str((end_time-begin_time).total_seconds()))

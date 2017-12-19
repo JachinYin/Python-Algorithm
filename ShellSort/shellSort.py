@@ -4,6 +4,8 @@ Data: 2017- 12 - 11
 Author: Jachin
 This is a scrpit for Shell's sort
 '''
+from randomNumber import *
+
 
 def shellSort1(arr):
     gap = len(arr)/2
@@ -30,3 +32,9 @@ def shellSort(arr):
 A = [49,38,65,97,26,13,27,49,55,4]
 
 print shellSort(A)
+
+begin_time =  datetime.datetime.now()
+shellSort(number_arr)
+end_time =  datetime.datetime.now()
+
+print '排列%d个数用时%sS' %(len(number_arr),str((end_time-begin_time).total_seconds()))

@@ -17,6 +17,7 @@ class BinTree:
     def build(self):
         pass
 
+
     def lChild(self):
         pass
 
@@ -37,3 +38,4 @@ t.insert(8)
 print t.hight
 print t.leng
 print t.root
+

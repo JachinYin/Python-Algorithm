@@ -44,10 +44,44 @@ class BinTree:
         self.front_digui(root.lchild)
         self.front_digui(root.rchild)
 
+    def center_digui(self, root):
+        """利用递归实现树的中序遍历"""
+        if root is None:
+            return
+        self.front_digui(root.lchild)
+        print root.elem,
+        self.front_digui(root.rchild)
+
+    def last_digui(self, root):
+        """利用递归实现树的后序遍历"""
+        if root is None:
+            return
+        self.front_digui(root.lchild)
+        self.front_digui(root.rchild)
+        print root.elem,
+
+    def level_queue(self, root):
+        """利用队列实现树的层次遍历"""
+        if root is None:
+            return
+        myQueue = []
+        node = root
+        myQueue.append(node)
+        while myQueue:
+            node = myQueue.pop(0)
+            print node.elem,
+            if node.lchild != None:
+                myQueue.append(node.lchild)
+            if node.rchild != None:
+                myQueue.append(node.rchild)
+
 t = BinTree()
 t.add(3)
 t.add(2)
 t.add(5)
 t.add(7)
+print '树\n先序遍历：',
 t.front_digui(t.root)
+print '\n层次遍历：',
+t.level_queue(t.root)
 
